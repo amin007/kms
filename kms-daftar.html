@@ -13,8 +13,6 @@
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css">
-	
-
 <style type="text/css">
 table.excel {
 	border-style:ridge;
@@ -117,6 +115,81 @@ table.excel tbody td
 	</div>
 </nav>
 <!-- tamat - nav atas sekali ---------------------------------------------------------------------------------------------- -->
+
+<!-- mula - borang utama ---------------------------------------------------------------------------------------------- -->
+<form method="POST" action="" class="form-horizontal">
+<!-- mula - input tengah ------------------------------------------------------------------------------------------- -->
+<div class="form-group">
+	<label for="inputTajukAtas" class="col-sm-2 control-label">Contoh medan</label>
+	<div class="col-sm-6">
+		<div class="input-group">
+		<span class="input-group-addon">{contoh input data}</span>
+		</div>	
+	</div>
+</div>
+<div class="form-group">
+	<label for="inputTajuk" class="col-sm-2 control-label">Tajuk</label>
+	<div class="col-sm-6">
+		<div class="input-group input-group-lg">
+		<span class="input-group-addon">{data-contoh}</span>
+		<input type="text" class="form-control">
+		</div>	
+	</div>
+</div>
+<div class="form-group">
+	<label for="inputTajuk" class="col-sm-2 control-label">Tarikh</label>
+	<div class="col-sm-6">
+		<div class="input-group input-group-sm">
+		<span class="input-group-addon"><input type="checkbox" value="x"></span>
+		<input type="date" class="form-control date-picker"
+		placeholder="Cth: 2014-05-01" id="date" data-date-format="yyyy/mm/dd" />
+		</div>
+	</div>
+</div>
+<div class="form-group">
+	<label for="inputTajukC" class="col-sm-2 control-label">TajukC</label>
+	<div class="col-sm-6"><div class="input-group input-group-sm">
+		<span class="input-group-addon">{pilih-hari}</span>
+			<select class="form-control">
+			<option>#ceritahariahad #berfikir</option>
+			<option>#ceritahariisnin #aturcara #programming</option>
+			<option>#ceritahariselasa #apps</option>
+			<option>#ceritaharirabu #bisnes</option>
+			<option>#ceritaharikhamis #pelaburan</option>
+			<option>#ceritaharijumaat</option>
+			<option>#ceritaharisabtu #rnd</option>
+			</select>
+	</div></div>
+</div>
+<div class="form-group">
+	<label for="inputTajukB" class="col-sm-2 control-label">Isi Kandungan</label>
+	<div class="col-sm-6">
+		<textarea rows="1" cols="20" 
+		class="form-control"></textarea
+		<pre>{data-contohB}</pre>
+	</div>
+</div>
+<div class="form-group">
+	<label for="inputNotaKaki" class="col-sm-2 control-label">NotaKaki</label>
+	<div class="col-sm-6">
+		<div class="input-group input-group-sm">
+		<span class="input-group-addon">{data-contoh}</span>
+		<input type="text" class="form-control">
+		</div>	
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="inputSubmit" class="col-sm-3 control-label">Jadual</label>
+	<div class="col-sm-6">
+		<input type="hidden" name="jadual" value="@jadual">
+		<input type="submit" name="Simpan" value="Simpan" class="btn btn-primary btn-large">
+		<input type="reset" name="Reset" value="Reset" class="btn btn-default btn-large">
+	</div>
+</div>
+<!-- tamat - input tengah ------------------------------------------------------------------------------------------- -->
+<form>	
+<!-- tamat - borang utama ---------------------------------------------------------------------------------------------- -->
 
 
 <!-- Bootstrap core JavaScript

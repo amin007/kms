@@ -13,13 +13,13 @@ class Papar
 		//echo '<br>1.Anda berada di class Papar::' . $nama . '()<br>';
 
 		$namafail = explode('/', $nama);
-        $failPapar = GetMatchingFiles(
+		$failPapar = GetMatchingFiles(
 			GetContents(PAPAR . '/' . $namafail[0]),
 			$namafail[1] . '.php');
 		$paparFail = $failPapar[0];
 		/*echo '<hr size=2>PAPAR=' . PAPAR . '<br>';
-        echo '$namafail=<pre>'; print_r($namafail) . '</pre><br>';
-        echo '$failPapar=<pre>'; print_r($failPapar) . '</pre><br>';
+		echo '$namafail=<pre>'; print_r($namafail) . '</pre><br>';
+		echo '$failPapar=<pre>'; print_r($failPapar) . '</pre><br>';
 		echo '$paparFail->' . $paparFail . '<br>';
 		//*/
 

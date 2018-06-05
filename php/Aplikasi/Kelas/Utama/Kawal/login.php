@@ -6,7 +6,7 @@ class Login extends \Aplikasi\Kitab\Kawal
 	function __construct()
 	{
 		//echo '<br>class Index extends Kawal';
-		//parent::__construct();
+		parent::__construct();
 		//\Aplikasi\Kitab\Kebenaran::kawalMasuk();
 		$this->_folder = huruf('kecil', namaClass($this));
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
@@ -27,15 +27,27 @@ class Login extends \Aplikasi\Kitab\Kawal
 ##-----------------------------------------------------------------------------------------
 	public function paparKandungan($folder, $fail, $noInclude = 0)
 	{
-		echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		//echo '<hr>$papar :<pre>'; print_r($this->papar); echo '</pre>';
 		# Pergi papar kandungan
 		$jenis = $this->papar->pilihTemplate($template=0);
-		echo '<br>$jenis=' . $jenis . '|';
-		/*$this->papar->bacaTemplate(
-		$this->papar->paparTemplate(
+		//$this->semakHartanah($jenis);
+		$this->papar->bacaTemplate(
+		//$this->papar->paparTemplate(
 			$folder . '/' . $fail, $jenis, $noInclude); # $noInclude=0
 			//'mobile/mobile',$jenis,0); # $noInclude=0
 		//*/
+	}
+##-----------------------------------------------------------------------------------------
+	public function semakHartanah($jenis)
+	{
+		echo '<br>$jenis=' . $jenis . '|';
+		$a = 'bacaTemplate';
+		$b = 'paparTemplate';
+		if(property_exists($this->papar,$a))
+			echo '<br>hartanah ' . $a . 'wujud';
+		if(property_exists($this->papar,$b))
+			echo '<br>hartanah ' . $b . 'wujud';
 	}
 ##-----------------------------------------------------------------------------------------
 	public function semakPembolehubah($senarai)

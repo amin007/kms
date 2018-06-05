@@ -41,7 +41,7 @@ class Peta
 			# semak sama ada method ada dalam $kawal
 			if ( !method_exists($kawal, $method))
 				$this->parameter();
-			else $this->cari_pengawal($kawal, $url);
+			else $this->cari_pengawal($kawal, $method, $url);
 			//
 		}
 		else $this->sesatDaa();//*/
@@ -66,7 +66,7 @@ class Peta
 	 *  url[4] = Param4
 	 *  url[5] = Param5
 	 */
-	private function cari_pengawal($kawal, $url)
+	private function cari_pengawal($kawal, $method, $url)
 	{
 		$panjang = count($url); //echo '$panjang = ' . $panjang . '<br>';
 		# Pastikan kaedah yang kita panggil wujud
@@ -74,7 +74,7 @@ class Peta
 		{
 			if (!method_exists($kawal, $url[1])) {$this->parameter();}
 		}//*/
-		$this->muatkanKawal($kawal, $url[1], $panjang, $url);
+		$this->muatkanKawal($kawal, $method, $panjang, $url);
     }
 #------------------------------------------------------------------------------------------------------------------
 	private function muatkanKawal($kawal, $fungsi, $panjang, $url)
@@ -109,12 +109,10 @@ class Peta
 
 			case 2: # Kawal->Kaedah()
 			$kawal->{$fungsi}();
-			//echo '<br>kawal$kawal->'.$url[1].'()<pre>'; print_r($kawal->{url[1]}()); echo '</pre>';
 			break;
 
 			default: $kawal->index(); break;
 		}//*/
-		//echo '<br>kawal<pre>'; print_r($kawal); echo '</pre>';
 	}
 #------------------------------------------------------------------------------------------------------------------
 #--- masuk fungsi campak ke pangkal jalan jika sesat

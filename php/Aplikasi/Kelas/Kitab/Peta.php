@@ -29,7 +29,7 @@ class Peta
 		//$this->debugPembolehubah($failKawal, $fail, $url, $Url);
 
 		/* 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
-		 * jika ya : masukkan $fail dan isytihar class tersebut
+		 * jika ya : isytihar class tersebut
 		 * jika tak : cari fungsi sesat()
 		 */
 		if (file_exists($fail))
@@ -50,7 +50,7 @@ class Peta
 	private function debugPembolehubah($failKawal, $fail, $url, $Url)
 	{
 		echo '<hr>KAWAL=' . KAWAL . '<br>';
-		echo '<pre>$failKawal='; print_r($failKawal) . '</pre>';
+		echo '<pre>$failKawal='; print_r($failKawal); echo '</pre>';
 		echo '<hr>$fail->' . $fail . '<br>';
 		echo '<hr>$url[0]->' . $Url[0] . '<br>';
 	}
@@ -74,7 +74,6 @@ class Peta
 		{
 			if (!method_exists($kawal, $url[1])) {$this->parameter();}
 		}//*/
-		else $this->sesatDaa();
 		$this->muatkanKawal($kawal, $url[1], $panjang, $url);
     }
 #------------------------------------------------------------------------------------------------------------------

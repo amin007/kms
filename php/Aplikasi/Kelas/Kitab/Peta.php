@@ -21,26 +21,41 @@ class Peta
 		$Url[0] = '\\Aplikasi\Kawal\\' . huruf('Besar', $url[0]);
 		//$this->debugPembolehubah($url, $Url);
 
-		/* 3. semak sama ada dalam folder KAWAL $fail benar2 wujud
+		/* 3. dapatkan fail dalam folder KAWAL yang serupa dengan $url[0]
+		 * dan masukkan dalam $fail
+		 */
+		$failKawal = GetMatchingFiles(GetContents(KAWAL),$url[0] . '.php');
+		$fail = $failKawal[0];
+		if ($fail == null) $fail = 0;
+		//$this->debugPembolehubah($failKawal, $fail, $url, $Url);
+		//echo '<br>adakah $fail wujud=>' . file_exists($fail) . '|<br>';
+
+		/* 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
 		 * jika ya : masukkan $fail dan isytihar class tersebut
 		 * jika tak : cari fungsi sesat()
 		 */
-		$kawal = new $Url[0];
-		$kawal->jemaahTaskil($url[0]);
-		//echo '<br>kawal<pre>'; print_r($kawal); echo '</pre>';
-		# jika $url[1] tak disetkan, bagi $method='index'
-		$method = (isset($url[1])) ? $url[1] : 'index';
-		# semak sama ada method ada dalam $kawal
-		if ( !method_exists($kawal, $method))
-			$this->parameter();
-		else $this->cari_pengawal($kawal, $url);//*/
+		//if (file_exists($fail))
+		if ($fail != 0)
+		{
+			$kawal = new $Url[0];
+			$kawal->jemaahTaskil($url[0]);
+			# jika $url[1] tak disetkan, bagi $method='index'
+			$method = (isset($url[1])) ? $url[1] : 'index';
+			# semak sama ada method ada dalam $kawal
+			if ( !method_exists($kawal, $method))
+				$this->parameter();
+			else $this->cari_pengawal($kawal, $url);
+			//
+		}
+		else $this->sesatDaa();//*/
 	}
 #------------------------------------------------------------------------------------------------------------------
-	private function debugPembolehubah($url, $Url)
+	private function debugPembolehubah($failKawal, $fail, $url, $Url)
 	{
-		//echo '<hr>KAWAL=' . KAWAL . '<br>';
-		//echo '<hr>$fail->' . $fail . '<br>';
-		//echo '<hr>$url[0]->' . $Url[0] . '<br>';
+		echo '<hr>KAWAL=' . KAWAL . '<br>';
+		echo '<pre>$failKawal='; print_r($failKawal) . '</pre>';
+		echo '<hr>$fail->' . $fail . '<br>';
+		echo '<hr>$url[0]->' . $Url[0] . '<br>';
 	}
 #------------------------------------------------------------------------------------------------------------------
 	/**
@@ -62,7 +77,7 @@ class Peta
 		{
 			if (!method_exists($kawal, $url[1])) {$this->parameter();}
 		}//*/
-		//else $this->sesatDaa();
+		else $this->sesatDaa();
 		$this->muatkanKawal($kawal, $url[1], $panjang, $url);
     }
 #------------------------------------------------------------------------------------------------------------------

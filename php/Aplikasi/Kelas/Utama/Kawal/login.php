@@ -27,8 +27,6 @@ class Login extends \Aplikasi\Kitab\Kawal
 ##-----------------------------------------------------------------------------------------
 	public function paparKandungan($folder, $fail, $noInclude = 0)
 	{
-		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
-		//echo '<hr>$papar :<pre>'; print_r($this->papar); echo '</pre>';
 		# Pergi papar kandungan
 		$jenis = $this->papar->pilihTemplate($template=0);
 		//$this->semakHartanah($jenis);

@@ -5,7 +5,7 @@ class Papar
 #==========================================================================================
 	function __construct()
 	{
-		echo '<br>1. Anda berada di class Papar<br>';
+		//echo '<br>1. Anda berada di class Papar<br>';
 	}
 #==========================================================================================
 	public function baca($nama, $template, $noInclude = false)
@@ -64,10 +64,10 @@ class Papar
 	public function paparTemplate($nama, $template, $noInclude = false)
 	{
 		$namafail = explode('/', $nama);
-        $failPapar = GetMatchingFiles(
+		$failPapar = GetMatchingFiles(
 			GetContents(PAPAR . '/' . $namafail[0]),
-			$namafail[1] . '.php');
-		$paparFail = $failPapar[0];
+			$namafail[1] . '.php');//*/
+		$paparFail = $namafail[1] . '.php';//$failPapar[0];
 		$lokasiTemplate = '/template/' . $template;
 
 		/*echo '<hr size=2>$namafail=<pre>'; print_r($namafail) . '</pre><br>';
@@ -95,7 +95,8 @@ class Papar
 			$namafail[1] . '.php');
 		$paparFail = $failPapar[0];
 		$lokasiTemplate = '/template/' . $template;
-		//echo '$paparFail=' . $paparFail . '|<br>';
+		//echo '<hr size=2>$namafail=<pre>'; print_r($namafail) . '</pre><br>';
+		//echo '<br>$paparFail=' . $paparFail . '|<br>';
 		//echo '$noInclude=' . $noInclude . '|<br>';
 
 		if ($paparFail == false)

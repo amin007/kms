@@ -77,42 +77,38 @@ class Peta
 		$this->muatkanKawal($kawal, $url[1], $panjang, $url);
     }
 #------------------------------------------------------------------------------------------------------------------
-	private function muatkanKawal($kawal, $m, $panjang, $url)
+	private function muatkanKawal($kawal, $fungsi, $panjang, $url)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
-		//echo '<br>kawal<pre>'; print_r($kawal); echo '</pre>';
-		//echo "<br>\$panjang = $panjang";
-		//echo '<br>$url=<pre>'; print_r($url); echo '</pre>';
 		# Tentukan apa yang dimuatkan
-		$panjang = 0;
 		switch ($panjang)
 		{
 			case 8: # Kawal->Kaedah(Param2, Param3, Param4, Param5, Param6, Param7)
-			$kawal->{$m}($url[2], $url[3], $url[4], $url[5], $url[6], $url[7]);
+			$kawal->{$fungsi}($url[2], $url[3], $url[4], $url[5], $url[6], $url[7]);
 			break;
 
 			case 7: # Kawal->Kaedah(Param2, Param3, Param4, Param5,, Param6)
-			$kawal->{$m}($url[2], $url[3], $url[4], $url[5], $url[6]);
+			$kawal->{$fungsi}($url[2], $url[3], $url[4], $url[5], $url[6]);
 			break;
 
 			case 6: # Kawal->Kaedah(Param2, Param3, Param4, Param5)
-			$kawal->{$m}($url[2], $url[3], $url[4], $url[5]);
+			$kawal->{$fungsi}($url[2], $url[3], $url[4], $url[5]);
 			break;
 
 			case 5: # Kawal->Kaedah(Param2, Param3, Param4)
-			$kawal->{$m}($url[2], $url[3], $url[4]);
+			$kawal->{$fungsi}($url[2], $url[3], $url[4]);
 			break;
 
 			case 4: # Kawal->Kaedah(Param2, Param3)
-			$kawal->{$m}($url[2], $url[3]);
+			$kawal->{$fungsi}($url[2], $url[3]);
 			break;
 
 			case 3: # Kawal->Kaedah(Param2)
-			$kawal->{$m}($url[2]);
+			$kawal->{$fungsi}($url[2]);
 			break;
 
 			case 2: # Kawal->Kaedah()
-			$kawal->{$m}();
+			$kawal->{$fungsi}();
 			//echo '<br>kawal$kawal->'.$url[1].'()<pre>'; print_r($kawal->{url[1]}()); echo '</pre>';
 			break;
 

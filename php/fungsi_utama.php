@@ -27,7 +27,7 @@ spl_autoload_register(function ($namaClass)
 	foreach($cariFail as $kitabApa)
 	{	//echo '$kitabApa->' . $kitabApa . '<br>';
 		if (file_exists($kitabApa)) require $kitabApa;
-		else echo 'tidak jumpa daa<br>';
+		else exit('tidak jumpa daa<br>');
 	}//*/
 });
 
@@ -89,8 +89,8 @@ function GetMatchingFiles($files, $search)
 # Returns all Files contained in given dir, including subdirs
 function GetContents($dir,$files=array()) 
 {
-	//if(!($res=opendir($dir))): exit("folder $dir tidak wujud!!!");
-	if(!($res=@opendir($dir))): exit(\Aplikasi\Kelas\Kitab\Peta::folderPaparTidakWujud());
+	//if(!($res=@opendir($dir))): exit("<br>folder $dir tidak wujud!!!</br>");
+	if(!($res=@opendir($dir))): exit(\Aplikasi\Kitab\Peta::folderPaparTidakWujud());
 	else:
 		while(($file=readdir($res))==TRUE) 
 		if($file!="." && $file!="..")

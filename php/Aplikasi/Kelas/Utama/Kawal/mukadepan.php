@@ -55,12 +55,14 @@ class Mukadepan extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# Set pemboleubah utama
 		$this->papar->tajuk = namaClass($this);
-		$this->papar->senarai = $this->tanya->jadualdaa();
+		$this->papar->senarai['dass'] = $this->tanya->jadualdaa();
+		$this->papar->template = 'biasa';
 
 		# Pergi papar kandungan
-		$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		$this->_folder = 'cari';
+		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
 		$fail = array('index','jadual','ubah','cari','buang');
-		//$this->paparKandungan($this->_folder,$fail[1],$noInclude=0);
+		$this->paparKandungan($this->_folder,$fail[1],$noInclude=0);
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================

@@ -66,5 +66,24 @@ class Mukadepan extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder,$fail[1],$noInclude=0);
 	}
 #------------------------------------------------------------------------------------------
+	public function dua()
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		# Set pemboleubah utama
+		$this->papar->tajuk = namaClass($this);
+		$this->papar->senarai['stress(tekanan)'] = $this->tanya->jadualdaa();
+		$this->papar->senarai['anzieti(kerisauan0'] = $this->tanya->jadualdaa();
+		$this->papar->senarai['dipression(kemurungan'] = $this->tanya->jadualdaa();
+		$this->papar->senarai['skor saringan'] = $this->tanya->jadualdaa();
+		//$this->papar->template = 'biasa';
+		$this->papar->template = 'bootstrap';
+
+		# Pergi papar kandungan
+		$this->_folder = 'cari';
+		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
+		$fail = array('index','jadual','ubah','cari','buang');
+		$this->paparKandungan($this->_folder,$fail[1],$noInclude=0);
+	}
+#------------------------------------------------------------------------------------------
 #==========================================================================================
 }

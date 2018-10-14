@@ -37,11 +37,32 @@ class Mukadepan_Tanya extends \Aplikasi\Kitab\Tanya
 		$data[]['soalan'] = 'Saya rasa sukar untuk relaks';
 		$data[]['soalan'] = 'Saya rasa sedih dan murung';
 		$data[]['soalan'] = 'Saya tidak dapat menahan sabar dengan perkara yang menghalang saya meneruskan apa yang saya lakukan';
-		$data[]['soalan'] = 'Saya';
+		$data[]['soalan'] = 'Saya rasa hampir-hampir menjadi panik/cemas';
+		$data[]['soalan'] = 'Saya tidak bersemangat dengan apa jua yang saya lakukan';
+		$data[]['soalan'] = 'Saya tidak begitu berharga sebagai seorang individu';
+		$data[]['soalan'] = 'Saya mudah tersinggung (rasa yang saya mudah tersentuh)';
+		$data[]['soalan'] = 'Saya sedar tindakbalas jantung saya walaupun tidak melakukan aktiviti fizikal (contohnya kadar denyutan jantung bertambah, atau denyutan jantung berkurangan';
+		$data[]['soalan'] = 'Saya berasa takut tanpa sebab yang munasabah';
+		$data[]['soalan'] = 'Saya rasa hidup ini tidak bermakna';
 		$data2 = 1; # kira jumlah data
 
 		return $data; # pulangkan nilai
-		
+	}
+#---------------------------------------------------------------------------------------------------#
+	function skorsaringan()
+	{
+		$data[]['Meaning (makna)'] = array(Normal (normal)	0-9	0-7	0-14);
+		$data[]['Depression(Kemurungan)'] =
+			array(Mild (ringan)	10-13	8-9	15-18);
+		$data[]['Anxiety(Keresahan)'] =
+			array(Moderate (sederhana)	14-20	10-14	19-25);
+		$data[]['Stress(Stres)'] =
+			array(Severe (teruk)	21-27	15-19	26-33);
+		$data[]['Extremely severe(sangat teruk)'] = 
+			array(28+	20+	34+);
+		$data2 = 1; # kira jumlah data
+
+		return $data; # pulangkan nilai
 	}
 #---------------------------------------------------------------------------------------------------#
 #=====================================================================================================

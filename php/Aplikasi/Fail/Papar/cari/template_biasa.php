@@ -6,7 +6,7 @@ foreach ($this->senarai as $myTable => $row)
 	else
 	{
 		$tajukjadual = '<span class="badge badge-success">' . $myTable . '</span>'
-		. "\r" . '<span class="badge">' . count($row) . '</span>';
+		. "\r" . '<span class="badge">(' . count($row) . ')</span>';
 		echo "\n"; ?>
 <!-- Jadual <?php echo $myTable ?> ########################################### -->
 <?php include 'pilih_' . $pilihJadual . '.php'; ?>

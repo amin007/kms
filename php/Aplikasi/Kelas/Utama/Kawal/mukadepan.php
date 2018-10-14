@@ -56,7 +56,8 @@ class Mukadepan extends \Aplikasi\Kitab\Kawal
 		# Set pemboleubah utama
 		$this->papar->tajuk = namaClass($this);
 		$this->papar->senarai['dass'] = $this->tanya->jadualdaa();
-		$this->papar->template = 'biasa';
+		//$this->papar->template = 'biasa';
+		$this->papar->template = 'bootstrap';
 
 		# Pergi papar kandungan
 		$this->_folder = 'cari';

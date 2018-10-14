@@ -1,6 +1,6 @@
 <?php
 namespace Aplikasi\Tanya; //echo __NAMESPACE__;
-class Index_Tanya extends \Aplikasi\Kitab\Tanya
+class Mukadepan_Tanya extends \Aplikasi\Kitab\Tanya
 {
 #=====================================================================================================
 	public function __construct()
@@ -22,14 +22,17 @@ class Index_Tanya extends \Aplikasi\Kitab\Tanya
 #---------------------------------------------------------------------------------------------------#
 	function jadualDaa()
 	{
-		$kira = 0;
-		$data[$kira][] = 'Saya rasa susah untuk bertenang';
-		$data[$kira][] = 'Saya sedar mulut saya kering';
-		$data[$kira][] = 'Saya seolah-oleh tidak dapat mengalami perasaan positif sama sekali';
-		$data[$kira][] = 'Saya';
+		$data[]['soalan'] = 'Saya rasa susah untuk bertenang';
+		$data[]['soalan'] = 'Saya sedar mulut saya kering';
+		$data[]['soalan'] = 'Saya seolah-oleh tidak dapat mengalami perasaan positif sama sekali';
+		$data[]['soalan'] = 'Saya mengalami kesukaran bernafas (contohnya pernafasan yang laju, tercungap-cungap walaupun tidak melakukan senaman fizikal';
+		$data[]['soalan'] = 'Saya sukar untuk mendapatkan semangat bagi melakukan sesuatu perkara';
+		$data[]['soalan'] = 'Saya cenderung untuk bertindak keterlaluan dalam sesuatu keadaan';
+		$data[]['soalan'] = 'Saya rasa menggeletar (contohnya pada tangan);
+		$data[]['soalan'] = 'Saya';
 		$data2 = 1; # kira jumlah data
 
-		return ($pilih==1) ? $data2 : $data; # pulangkan nilai
+		return $data; # pulangkan nilai
 		
 	}
 #---------------------------------------------------------------------------------------------------#

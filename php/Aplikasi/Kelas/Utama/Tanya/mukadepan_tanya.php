@@ -51,15 +51,16 @@ class Mukadepan_Tanya extends \Aplikasi\Kitab\Tanya
 #---------------------------------------------------------------------------------------------------#
 	function skorsaringan()
 	{
-		$data[]['Meaning (makna)'] = array(Normal (normal)	0-9	0-7	0-14);
-		$data[]['Depression(Kemurungan)'] =
-			array(Mild (ringan)	10-13	8-9	15-18);
-		$data[]['Anxiety(Keresahan)'] =
-			array(Moderate (sederhana)	14-20	10-14	19-25);
-		$data[]['Stress(Stres)'] =
-			array(Severe (teruk)	21-27	15-19	26-33);
-		$data[]['Extremely severe(sangat teruk)'] = 
-			array(28+	20+	34+);
+		$data[]['Meaning (makna)'] = array(
+			'Normal (normal)',
+			'Mild (ringan)',
+			'Moderate (sederhana)',
+			'Severe (teruk)',
+			'Extremely severe(sangat teruk)',
+		);
+		$data[]['Depression(Kemurungan)'] =	array('0-5','6-7','8-10','11-14','15+');
+		$data[]['Anxiety(Keresahan)'] = array('0-4','5-6','7-8','9-10','11+');
+		$data[]['Stress(Stres)'] = array('0-7','8-9','10-13','14-17','18+');
 		$data2 = 1; # kira jumlah data
 
 		return $data; # pulangkan nilai

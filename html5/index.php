@@ -50,7 +50,6 @@ function paparFail()
 		echo "\n<li>" . pautan($file['name'], 'web') . '</li>';
 	endforeach;
 	echo "\n</ul>\n";
-	jadual();
 	//echo '<pre>'; print_r(getWebList()); echo '</pre>';
 	//echo '<pre>'; print_r(getFileList('./')); echo '</pre>';
 	dibawah();

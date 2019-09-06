@@ -50,6 +50,7 @@ function paparFail()
 		echo "\n<li>" . pautan($file['name'], 'web') . '</li>';
 	endforeach;
 	echo "\n</ul>\n";
+	jadual();
 	//echo '<pre>'; print_r(getWebList()); echo '</pre>';
 	//echo '<pre>'; print_r(getFileList('./')); echo '</pre>';
 	dibawah();
@@ -103,6 +104,24 @@ function dibawah()
 </body>
 </html>
 <?php
+}
+#------------------------------------------------------------------------------------------
+function jadual()
+{
+	echo '<table>';
+	for($i = 1; $i <=100; $i++):
+?>
+<tr>
+	<td><?php echo $i ?></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<?php
+	endfor;
+	echo '</table>';
 }
 #------------------------------------------------------------------------------------------
 

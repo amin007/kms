@@ -63,10 +63,10 @@ if($sqlsrv_obj->has_error()==false)
 <tbody>
 <?php for($page=1;$page<=1;$page++){ ?>
 <?php
-for ($kira=0; $kira < count($result); $kira++)
+for ($kira=0; $kira < count($row); $kira++)
 {## papar data $row -----------------------------------------------------
 	echo '<tr>' . "\r\t";
-	foreach ( $result[$kira] as $key=>$data )
+	foreach ( $row[$kira] as $key=>$data )
 	{
 		echo '<td>' . $data . '</td>';
 	}

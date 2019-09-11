@@ -42,7 +42,7 @@ function paparFail()
 	echo '<h1>Ini list fail automatik</h1>';
 	echo "\n" . '<ul class="fa-ul">';
 	foreach(getFileList('./') as $file):
-		echo ($file['type'] != 'dir') ? 
+		echo ($file['type'] == 'dir') ?
 		"\n<li>" . pautan($file['name'], 'dir') . '</li>'
 		: '';
 	endforeach;

@@ -38,7 +38,7 @@ function getFileList($dir)
 #------------------------------------------------------------------------------------------
 function paparFail()
 {
-	diatas('Contoh Datam HTML5');
+	diatas('Contoh Dalam HTML5');
 	echo '<h1>Ini list fail automatik</h1>';
 	echo "\n" . '<ul class="fa-ul">';
 	foreach(getFileList('./') as $file):

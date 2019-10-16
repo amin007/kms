@@ -36,6 +36,12 @@ table.excel tbody td
 	padding: 0 3px; border: 1px solid #aaaaaa;
 	background:#ffffff;
 }
+/* https://stackoverflow.com/questions/15988373/how-do-i-add-a-font-awesome-icon-to-input-field */
+input[type="submit"] {
+	font-family: "Font Awesome 5 Free", "FontAwesome";
+	font-size: 1.3333333333333333em;
+	font-weight: 600;
+}
 </style>
 </head>
 <body>
@@ -79,10 +85,11 @@ table.excel tbody td
 		<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
 		</ul>
 	<!-- sempadan 2 --------------------------------------------------------------------------- -->
-		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
+			<!-- borang cari tajuk -->
+			<form class="form-inline my-2" action="#cari/tajuk" method="POST">
+				<input type="submit" class="btn btn-info" value="&#xf002;">
+				<input type="text" name="cari" placeholder="Cari Tajuk" class="form-control">
+			</form>
 	<!-- sempadan 3 --------------------------------------------------------------------------- -->
 	</div>
 </nav>

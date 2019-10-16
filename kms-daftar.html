@@ -38,13 +38,20 @@ table.excel tbody td
 }
 /* https://stackoverflow.com/questions/15988373/how-do-i-add-a-font-awesome-icon-to-input-field */
 .carilah {
-	height: 32px;
-	width: 32px;
-	border: none;
-	cursor: pointer;
-	color: white; /*background-color: black;*/
-	position: center;
-	border-radius: 10px 0px 0px 10px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+	//font-size: 1rem;
+	//line-height: 1.5;
+	border-radius: 0.25rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	/* **************************************************************************************** */
+	//height: 32px;width: 32px;
+	color: white;
 }
 input[type="submit"] {
 	font-family: "Font Awesome 5 Free", "FontAwesome";

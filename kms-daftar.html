@@ -41,77 +41,36 @@ table.excel tbody td
 <body>
 
 <!-- mula - nav atas sekali ---------------------------------------------------------------------------------------------- -->
-<nav class="navbar navbar-inverse" role="navigation">
-<!-- div class="navbar navbar-custom" role="navigation" -->
-	<div class="container-fluid">
-		<!-- menu kiri mula -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#anjung">Anjung</a>
-			<a class="navbar-brand" href="#keluar">
-				<span class="glyphicon glyphicon-off"></span>Keluar</a>
-		</div>
-		<!-- menu kiri tamat -->
-		<!-- menu kanan mula -->
-		<div class="navbar-collapse collapse">
-<!-- mula - menubar kanan -------------------------------------------------------------------------------------------------------- -->
-<ul class="nav navbar-nav navbar-right">
-<li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-	<span class="glyphicon glyphicon-user"></span>Profile
-	<b class="caret"></b></a>
-	<ul class="dropdown-menu">
-	<li><a href="#rangkabaru/masukdata/1">
-		<span class="glyphicon glyphicon-barcode"></span>Tambah Tajuk</a></li>
-	<li class="divider"></li>
-	<li><a href="#keluar">
-		<span class="glyphicon glyphicon-off"></span>Keluar
-	</a></li>
-	</ul>
-</li>
-<li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-	<span class="glyphicon glyphicon-filter"></span>Cari
-	<b class="caret"></b></a>
-	<ul class="dropdown-menu">
-	<li><a href="#cari/tentang/msic/1">MSIC</a></li>
-	<li><a href="#cari/tentang/produk/1">PRODUK</a></li>
-	<li><a href="#cari/tentang/johor/2">LOKALITI JOHOR</a></li>
-	<li><a href="#cari/tentang/malaysia/2">LOKALITI MALAYSIA</a></li>
-	</ul>
-</li>
-<li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-	<span class="glyphicon glyphicon-stats"></span>Laporan
-	<b class="caret"></b></a>
-	<ul class="dropdown-menu">
-	<li><a href="#laporan/bulanan">Laporan Bulanan</a></li>
-	<li class="divider"></li>
-	</ul>
-</li>
-<li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<span class="glyphicon glyphicon-question-sign"></span>Bantuan
-	<b class="caret"></b></a>
-	<ul class="dropdown-menu">
-	<li><a href="#forum/perdana">Forum</a></li>
-	<li><a href="#mesej/utama">Email</a></li>
-	</ul>
-</li>
-</ul>
-<!-- tamat - menubar kanan -------------------------------------------------------------------------------------------------------- -->
-			<!-- borang cari tajuk -->
-			<form class="navbar-form navbar-right" action="#cari/tajuk" method="POST">
-				<input type="submit" class="btn btn-info fa-input" value="&#xf002;">
-				<input type="text" name="cari" placeholder="Cari Tajuk" class="form-control">
-			</form>
-		</div>
-		<!-- menu kanan tamat -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">Navbar</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- sempadan 1 --------------------------------------------------------------------------- -->
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+		<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Dropdown</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div><!-- /  class="dropdown-menu" -->
+		</li>
+		<li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+		</ul>
+	<!-- sempadan 2 --------------------------------------------------------------------------- -->
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	<!-- sempadan 3 --------------------------------------------------------------------------- -->
 	</div>
 </nav>
 <!-- tamat - nav atas sekali ---------------------------------------------------------------------------------------------- -->

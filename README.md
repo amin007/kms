@@ -33,6 +33,17 @@ Kalau perasan class PangkalanData extends PDO dan class DB_Mysqli saya kekalkan 
 Ini kerana saya cuba bagi tahu yang $this->db akan dirujuk terus kepada 
 sql yang akan guna istilah select,update,delete dan sebagainya.
 
+___
+# Php Version
+
+```php
+//phpinfo();
+//echo PHPVERSION() . '<br>';
+echo PHP_VERSION . '<br>';
+echo PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION . '.' . PHP_RELEASE_VERSION . '<br>';
+echo '<pre>'; print_r($_SERVER); echo '</pre>';
+```
+
 # Standard
 http://www.php-fig.org/psr/psr-4/
 

@@ -9,11 +9,11 @@ function getFileList($dir)
 
 	# open pointer to directory and read list of files
 	$d = @dir($dir) or die("getFileList: Failed opening directory {$dir} for reading");
-	while(FALSE !== ($entry = $d->read())) 
+	while(FALSE !== ($entry = $d->read()))
 	{
 		// skip hidden files
 		if($entry{0} == ".") continue;
-		if(is_dir("{$dir}{$entry}")) 
+		if(is_dir("{$dir}{$entry}"))
 		{
 			$retval[] = [
 				'name' => "{$dir}{$entry}/",
@@ -21,8 +21,8 @@ function getFileList($dir)
 				'size' => 0,
 				'lastmod' => filemtime("{$dir}{$entry}")
 			];
-		} 
-		elseif(is_readable("{$dir}{$entry}")) 
+		}
+		elseif(is_readable("{$dir}{$entry}"))
 		{
 			$retval[] = [
 			'name' => "{$dir}{$entry}",
